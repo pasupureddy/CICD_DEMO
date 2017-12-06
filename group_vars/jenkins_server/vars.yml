@@ -1,0 +1,7 @@
+jenkins_hostname: "{{ ansible_hostname }}"
+
+# See Variables and Vaults:
+# http://docs.ansible.com/ansible/playbooks_best_practices.html#variables-and-vaults
+
+jenkins_admin_username: "{{ vault_jenkins_admin_username }}"
+jenkins_admin_password: "{{ vault_jenkins_admin_password }}"
