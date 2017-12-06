@@ -1,0 +1,34 @@
+---
+- hosts: windows
+
+  tasks:
+
+   - name: checking the ping connection
+     win_ping:
+
+   - name: get a msg on console
+     debug:
+       msg: "hi this test"
+
+   - name: install vlc player
+     win_chocolatey:
+        name: vlc
+
+   - name : install java on windows
+     win_chocolatey:
+        name: jre8
+
+   - name: install google chrome
+     win_chocolatey:
+        name: googlechrome
+
+   - name: installing iis server on windows
+     win_feature:
+        name: web-server
+        state: present
+
+   - name: copying files from source to destinations server
+     win_copy:
+        src: copy_this_file.txt
+        dest: C:\tmp
+

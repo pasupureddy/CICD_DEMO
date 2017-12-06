@@ -2,9 +2,7 @@
 windock3     ansible_host=172.18.1.28
 windock4     ansible_host=172.18.1.29
 
-[webserver]
+[windows]
 windock3
-
-[dbserver]
 windock4
 
